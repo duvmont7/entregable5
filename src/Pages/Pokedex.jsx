@@ -124,7 +124,9 @@ const Pokedex = () => {
             className=" w-80 h-10 px-3 capitalize "
             onChange={(e) => setCurrentType(e.target.value)}
           >
-            <option className="text-lg" value="">All</option>
+            <option className="text-lg" value="">
+              All
+            </option>
             {types.map((type) => (
               <option value={type} key={type}>
                 {type}
@@ -151,8 +153,8 @@ const Pokedex = () => {
         {pagesInBlock.map((numberPage) => (
           <li
             onClick={() => setCurrentPage(numberPage)}
-            className={`p-3 bg-red-600 font-bold text-white rounded-md cursor-pointer ${
-              numberPage === currentPage && "bg-red-300"
+            className={`p-3 font-bold text-white rounded-md cursor-pointer ${
+              numberPage === currentPage ? "bg-red-300" : "bg-red-600"
             } `}
             key={numberPage}
           >
